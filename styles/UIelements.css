@@ -1,0 +1,152 @@
+/*Esse arquivo tem a finalidade de estruturar os elementos de UI como um todo, independentemente de um tema*/
+
+/*#region BOTÕES*/
+button {
+    margin-right: 5px;
+    background-color: rgba(0,0,0,0.0);  
+    cursor: pointer;
+}
+/*#endregion*/
+/*#region MODALS*/
+.modal {
+    box-sizing: border-box;
+    display: flex;
+}
+.modalElement_header {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-left: 15px;
+    height: 100px;
+    width: 100%;
+}
+.modal_container_modalElements {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.modalElement_contentArea {
+    display: flex;
+    overflow-y:auto;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+}
+.modalElement_content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+}
+.modalElement_buttonsArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 15px;
+    min-height: 75px;
+}
+.modalRoundButton {
+    height: 45px;
+    min-width: 110px;
+    margin-left: 10px;
+    border-radius: 22.5px;
+}
+.modalSquareButton {
+    height: 45px;
+    min-width: 110px;
+    margin-left: 10px;
+    border-radius: 8px;
+}
+.primaryButton, .secondaryButton {
+    background-color: rgba(0,0,0,0.0);  
+}
+/*#endregion*/
+
+/*#region NOTIFICAÇÕES*/
+.notification {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100px;
+    width: 320px;
+    }
+.notification_content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 12px;
+    overflow:hidden;
+    white-space: normal;       
+    word-wrap: break-word;     
+    word-break: break-all;
+    }
+/*#endregion*/
+
+/*#region NAVBAR*/
+.floatingNavbar {
+    box-sizing: border-box;
+    display: flex;
+    height: 50px;
+}
+.fixedNavbar {
+    box-sizing: border-box;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    padding:5px;
+}
+.navbar_content {
+    display: flex;
+    flex-direction: row;
+    padding:5px;
+    align-items: center;
+}
+.floatingNavbarButton {
+    height: 35px;
+    min-width: 35px;
+    border-radius: 26px;
+    margin-right: 5px;
+}
+.fixedNavbarButton {
+    height: 35px;
+    min-width: 35px;
+    border-radius: 5px;
+}
+/*#endregion*/
+
+/*#region ELEMENTOS DE FORM*/
+input {
+    margin-right: 5px;
+}
+input[type="submit"] {
+    margin-right: 5px;
+    background-color: rgba(0,0,0,0.0);  
+    cursor: pointer;
+    min-width: 80px;
+}
+.roundInput {
+    background-color: rgba(0,0,0,0.2);
+    height: 100%;
+    border-radius: 26px ;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.squareInput {
+    background-color: rgba(0,0,0,0.2);
+    height: 100%;
+    border-radius: 8px ;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+/*#endregion*/

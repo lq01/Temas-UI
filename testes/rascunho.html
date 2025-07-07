@@ -1,0 +1,63 @@
+<svg style="display:none">
+    <filter id="refraction_square_2">
+        <!--1. Mapa de distorção (efeito vidro)-->
+        <feImage href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAPaSURBVHja1FpNb9tGEH2zHzZEiVKUwIcWDRoZdeumSJpr/v+xlyJA0wYJ1AABckiCOJLlOpbInR7IJZdLypKdoOUMFoRADj+eZt7M43JpPreDNMuBamSt7cYfcl1Hs+DcfItDBrhdDu3rhw/QPj0D0nNDZx/om/tsARMMDWgg2rnn0T0dzHYf7R3stacb4Ns3ZLLPgIZQM59hkMUAGGAGY/eo/Zt7rje69aDWtTIY5ID1j8JwwKG1d8bT4WBoqIxmNNSWnSbYFnsKeEX6Fnd3gAuucOXzQV17C+tculpOVgudO4Qw8gKAKe8ExnCY/nTyaDY7TZIRgYDan/zvndvwFPbs3Nzw9HCr2I0XH09ePpu9fmHW6/oGOQw2gCnT5uDg4PThk18fPU2SlJmrDLmRcdce3tt5my2mR6vJXUPu5O8/jfNx2MDAlRGAw/Te0fHxwyRJ8zz/b1hI+/8vRJ+mR/PjX7778OZwtSwT1EGVKWQAi1E6GSbj6r/vlRGzA87H08tkUBfUkAPEUJbKtO2lEeAU2KqS9SUHMp9C7Pf23KqyVZfRCoAWAsB69sQR0Deh1f9iymc/hRHQQlKIfQT0tgj0nwPkg1BHINRC/U8hakagBGADAD1/evI6uwZQdeKCIiSBA6bWhkEZhYQySk0AeQRASQSQNSMghcQdnVhKCpmoE8sCgM4U0kKqUMgBtKWEIBLr8JUyk5lCnbMSYiJgWy/1jTLKvQdQ2SaSElI6cVVpOqRE/7WQAVzXxJYkDqhtVYgkADABS2Mpwf1mcLvblhE4rDmBvN8YlB+FXUURKL6B9NxMmwM6SCERfUBt00JOiJRQURm1cgBEajSWEpkcLcSVlKhITMBawvuACVpBHgEQNCtRA3BNACSBxBUAF0oJEjWtwm0pQXJmJRoplMlJId4ZARX4ieBAQ0oIqkI6ioAOIkCiADQ6MYn6SsnhS72VlkI27APiO3EuqhPv0EJSvlJ2z42SkLlRE3Cgo5GROA74CDDBWe4zAAaUYjIulBKqbGQa0FiNFhfJkph6+fSkCOn402B4WS+mi6TE2b3389nz9GKSXH7NJWdfx5lwZ/r+ePbHYLRiijhgy2/ga7v+6+ffYfMHr0+Tf0ZFKL5w0d+NTtzmrJQbTz6e/PDs/vcvlXXMXZ9ZiQHCxfj8+ePf3j54NbwcGnzRssvI0zTdQocdyy4ZVrl0tJyMFgfKNcRy1pzcJYYiZGZzNni33GPpsW0uBK7qm/aSXAWFWwc+t1t6rLml9uPJ3SCI+4y2/555f+sRWw5jrmIAgiy7As1/tIMzscvvp+bfAQBTpumVDRiWKgAAAABJRU5ErkJggg=="
+        preserveAspectRatio="none"
+        result="mapaDistorcao"
+        />
+        <!--2. Mapa de intensidade da aberração cromática-->
+        <feImage href="data:image/png;base64,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"       preserveAspectRatio="none"
+        result="mascara"/>
+        <feColorMatrix in="mascara" type="luminanceToAlpha" result="maskAlpha" />
+
+        <!-- 1.1 Aberração cromática primeiro: canal vermelho -->
+        <feOffset in="mascara" dx="-3" dy="0" result="redShift"/>
+        <feColorMatrix in="redShift" type="matrix" result="redOnly"
+            values="1 0 0 0 0
+                    0 0 0 0 0
+                    0 0 0 0 0
+                    0 0 0 1 0"/>
+        <feComposite in="redOnly" in2="maskAlpha" operator="in" result="redMasked"/>
+        <!-- 1.2 Aberração cromática: canal azul -->
+        <feOffset in="mascara" dx="2" dy="2" result="blueShift"/>
+        <feColorMatrix in="blueShift" type="matrix" result="blueOnly"
+            values="0 0 0 0 0
+                    0 0 0 0 0
+                    0 0 1 0 0
+                    0 0 0 1 0"/>
+        <feComposite in="blueOnly" in2="maskAlpha" operator="in" result="blueMasked"/>
+        <!--1.3 Inverte a máscara para usar no centro -->
+        <feComponentTransfer in="maskAlpha" result="maskInversa">
+            <feFuncA type="table" tableValues="0 1" />
+        </feComponentTransfer>
+
+        <!--1.4 Canal verde central sem deslocamento, limitado à área central -->
+        <feColorMatrix in="mascara" type="matrix" result="greenRaw"
+        values="0 0 0 0 0
+                0 1 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0"/>
+        <feComposite in="greenRaw" in2="maskInversa" operator="in" result="greenOnly" />
+
+        <!-- 3. Combina os canais -->
+        <feBlend in="redMasked" in2="greenOnly" mode="screen" result="blend1"/>
+        <feBlend in="blend1" in2="blueMasked" mode="screen" result="colorfinal"/>
+
+        <!-- 2.1 Aplicando a distorção -->
+        <feDisplacementMap 
+            in="SourceGraphic" 
+            in2="mapaDistorcao"
+            scale="950" 
+            xChannelSelector="R" 
+            yChannelSelector="G"
+            result="distortion"/>
+
+        <feBlend in="colorfinal" mode="screen" result="final"/>
+
+        <!--3.1 Resultado final -->
+        <feMerge>
+            <feMergeNode in="final" />
+        </feMerge>
+
+    </filter>
+</svg>

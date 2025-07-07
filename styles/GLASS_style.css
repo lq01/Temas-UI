@@ -1,0 +1,209 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+/*GLASS DEFINE APENAS A APARÊNCIA DE VIDRO INTERNA DO ELEMENTO*/
+.GLASS {
+    position: relative;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 20px;
+    outline: 1px solid rgba(136, 136, 136, 0.2);
+    outline-offset: 0px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5),
+        0 01px 6px rgba(0,0,0,0.5);
+    color: rgb(219, 219, 219);
+    box-shadow: 0 0px 1px rgba(0, 0, 0, 0.5), 
+        0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.GLASS::after {
+    transition: 0.2s;
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 20px;
+    /* Cria um brilho difuso usando um gradiente branco borrado */
+    background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 80%, transparent 100%);
+    opacity: 0.4;
+    filter: blur(3px);
+    mix-blend-mode:color;
+}
+.GLASS::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 20px;
+    box-shadow: inset 0 0px 3px 0px rgba(255, 255, 255, 0.4),
+    0 0 1px 2px rgba(255, 255, 255, 0.2);    /* camada 2 */
+    
+}
+/*#region MODALS*/
+.GLASS_Modal {
+    box-sizing: border-box;
+    backdrop-filter: blur(12px) contrast(1.2) url(#refraction_square_2);
+    background-color: rgba(0,0,0,0.15);
+}
+.GLASS_modalElement_header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 1);
+    overflow:hidden;
+    border-color: rgba(255,255,255,0.27);
+    border-width: 1px;
+    border-style: solid;  
+    opacity: 85%;
+}
+.GLASS_modalElement_buttonsArea {
+    background-color: rgba(192,192,192,0);
+    border-color: rgba(0, 0, 0, 0.25);
+    outline: 1px solid rgba(255, 255, 255, 0.2);
+    border-width: 0;
+    border-top-width: 1px;
+    border-style: solid;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.GLASS_Button {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-top: 2px solid rgba(255, 255, 255, 0.55);
+    outline: 1px solid rgba(136, 136, 136, 0.2);
+    outline-offset: 0px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5),
+        0 01px 6px rgba(0,0,0,0.5);
+    color: rgb(219, 219, 219);
+    box-shadow: 0 0px 1px 1px rgba(0, 0, 0, 0.1),
+        inset 0 0 5px 1px rgba(0,0,0,0.2);
+    transition: 0.2s;
+}
+.GLASS_Button:hover {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-top: 2px solid rgba(255, 255, 255, 0.75);
+    transition: 0.2s;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), 
+    0 5px 5px rgba(0, 0, 0, 0.2),
+    inset 0 0 5px 1px rgba(0,0,0,0.25);
+    color: rgb(255,255,255);
+}
+#GLASS_roundButton {
+    backdrop-filter: blur(6px) contrast(1.2) url(#refraction_circle_1);
+    border-radius: 50%;
+    font-size: 26px;
+}
+/*#endregion*/
+
+/*#region SCROLLBAR DO MODAL */
+.GLASS_modalElement_content::-webkit-scrollbar {
+  width: 8px;          
+  height: 8px;            
+}
+.GLASS_modalElement_content::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.GLASS_modalElement_content::-webkit-scrollbar-thumb {
+     background: linear-gradient(rgba(255,255,255,0.6) 0px,rgba(200,200,200,0.6) 60px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.GLASS_modalElement_content::-webkit-scrollbar-thumb:hover {
+     background: linear-gradient(rgba(255,255,255,0.8) 0px,rgba(200,200,200,0.8) 60px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+/*#endregion*/
+
+/*#region NOTIFICAÇÕES*/
+.GLASS_Notification {
+    backdrop-filter: blur(12px) contrast(1.2) url(#refraction_square_2);
+    background-color: rgba(0, 0, 0, 0.3);
+    }
+/*#endregion*/
+
+/*#region NAVBAR*/
+.GLASS_FloatingNavbar {
+    backdrop-filter: blur(12px) contrast(1.2) url(#refraction_square_2);
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 28px;
+}
+.GLASS_FixedNavbar, .GLASS_FixedNavbar::after, .GLASS_FixedNavbar::before  {
+    backdrop-filter: blur(12px) contrast(1.2) url(#refraction_square_1);
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0px;
+}
+.GLASS_floatingNavbarButton {
+    transition: 0.3s;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.4);
+    border-width: 1px;
+    color: rgba(230,230,230,1);
+    font-size: 14px;
+    box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.2), inset 0 0 3px 1px rgba(0, 0, 0, 0.08);
+}
+.GLASS_fixedNavbarButton {
+    transition: 0.3s;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.4);
+    border-width: 1px;
+    color: rgba(230,230,230,1);
+    font-size: 14px;
+    box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3), inset 0 0 5px 1px rgba(0, 0, 0, 0.1);
+}
+.GLASS_fixedNavbarButton:hover, .GLASS_floatingNavbarButton:hover {
+    transition: 0.3s;
+    color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.10);
+    border-color:rgba(255,255,255,0.4);
+    box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.7), inset 0 0 5px 1px rgba(0, 0, 0, 0.18);
+} 
+
+.GLASS_fixedNavbarButton:hover{
+   border-top: solid 1px rgba(255,255,255,0.6);
+} 
+/*#endregion*/
+
+/*#region ELEMENTOS DE FORM*/
+.GLASS_RoundInput {
+    transition: 0.3s;
+    border: solid 1px, rgba(255,255,255,0.4);
+    color: rgb(230,230,230);
+    
+}
+.GLASS_RoundInput:hover {
+    transition: 0.3s;
+    border: solid 1px, rgba(255,255,255,0.6);
+}
+.GLASS_SquareInput {
+    transition: 0.3s;
+    border: solid 1px, rgba(255,255,255,0.4);
+    color: rgb(230,230,230);
+    
+}
+.GLASS_SquareInput:hover {
+    transition: 0.3s;
+    border: solid 1px, rgba(255,255,255,0.6);
+}
+.GLASS_SquareSubmitInput {
+    background-color: rgba(255,255,255,0);
+    transition: 0.3s;
+    border: solid 1px, rgba(255,255,255,0.4);
+    color: rgb(230,230,230);
+}
+
+/*#endregion*/
+
+/*#region IMAGEM */
+.GLASS_Img {
+    border-radius: 8px;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.3);
+    border-width: 1px;
+}
+/*#endregion*/
